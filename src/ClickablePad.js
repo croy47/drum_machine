@@ -1,26 +1,36 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useGlobalContext } from "./Context";
 import SoundEffects from "./SoundEffects";
 
 export const ClickablePad = () => {
-  const { bank, power, volume, playDrum, playByKey } = useGlobalContext();
+  const { bank, power, volume, playDrum } = useGlobalContext();
+
+  useEffect(() => {
+    document.addEventListener("keydown", (e) => {
+      let keyPressed = e.key.toUpperCase();
+      let sound = document.getElementById(keyPressed);
+      if (sound) {
+        let name = sound.parentNode.id;
+        playDrum(name, sound.id, power, volume);
+      } else {
+        alert("you pressPed a wrong key");
+      }
+    });
+  }, []);
 
   return (
     <div id="clickable_pad">
       {SoundEffects[bank].map((soundObj) => {
+        const { id: name, keyTrigger: key, url } = soundObj;
+
         return (
           <button
-            id={soundObj.id}
-            key={soundObj.keyTrigger}
+            id={name}
+            key={key}
             className="drum-pad"
-            onKeyDown={(event) => console.log(event.key)}
-            onClick={() => playDrum(soundObj.id, volume, power)}
+            onClick={() => playDrum(name, key, power, volume)}
           >
-            <audio
-              className="clip"
-              id={soundObj.keyTrigger}
-              src={soundObj.url}
-            ></audio>
+            <audio className="clip" id={key} src={url}></audio>
             {soundObj.keyTrigger}
           </button>
         );

@@ -1,6 +1,6 @@
 const reducer = (state, action) => {
   if (action.type === "TOGGLE_ON_OFF") {
-    console.log("switch", !state.power);
+    // console.log("switch", !state.power);
     return { ...state, power: !state.power };
   }
 
@@ -16,10 +16,9 @@ const reducer = (state, action) => {
     return { ...state, volume: action.payload };
   }
 
-  if (action.type === "AUDIO_PLAYED") {
+  if (action.type === "DISPLAY_AUDIO_NAME") {
     return { ...state, display: action.payload };
   }
-
   return { ...state };
 };
 

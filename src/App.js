@@ -1,4 +1,3 @@
-import react from "react";
 import { ClickablePad } from "./ClickablePad";
 import { FaPowerOff } from "react-icons/fa";
 
@@ -34,7 +33,14 @@ function App() {
         </p>
         <p>
           {" "}
-          <a href="https://github.com/croy47/drum_machine"> Source Code</a>
+          <a
+            href="https://github.com/croy47/drum_machine"
+            rel="noreferrer"
+            target="_blank"
+          >
+            {" "}
+            Source Code
+          </a>
         </p>
       </footer>
     </main>

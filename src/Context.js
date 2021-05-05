@@ -27,16 +27,15 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "CHANGE_VOL", payload: e.target.value });
   };
 
-  const playDrum = (id, volume, power) => {
+  const playDrum = (name, key, power, volume) => {
     if (power) {
-      let button = document.getElementById(id);
-      let audio = button.childNodes[0];
-      audio.currentTime = 0;
-      audio.volume = (volume / 100).toFixed(1);
-      audio.play();
-      dispatch({ type: "AUDIO_PLAYED", payload: id });
+      let sound = document.getElementById(key);
+      sound.currentTime = 0;
+      sound.volume = parseFloat(volume / 100).toFixed(1);
+      sound.play();
+      dispatch({ type: "DISPLAY_AUDIO_NAME", payload: name });
     } else {
-      alert("Switch On Drum first by clicking the power button");
+      alert("Switch on Drum Machine By Clicking the Power Button");
     }
   };
 
