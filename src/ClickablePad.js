@@ -12,8 +12,6 @@ export const ClickablePad = () => {
       if (sound) {
         let name = sound.parentNode.id;
         playDrum(name, sound.id, power, volume);
-      } else {
-        alert("you pressPed a wrong key");
       }
     });
   }, []);

@@ -1,7 +1,9 @@
+import React from "react";
 import { ClickablePad } from "./ClickablePad";
 import { FaPowerOff } from "react-icons/fa";
 
 import { Controls } from "./Controls";
+import { Music } from "./Music";
 import { useGlobalContext } from "./Context";
 
 function App() {
@@ -27,6 +29,7 @@ function App() {
         <ClickablePad />
         <Controls />
       </div>
+      <Music />
       <footer>
         <p>
           Designed by <a href="mailto:croy4744@gmail.com"> Chandan Roy</a>

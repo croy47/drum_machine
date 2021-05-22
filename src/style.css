@@ -128,6 +128,10 @@ main {
   box-shadow: 3px 3px 3px 3px pink inset, 2px 2px 2px 2px black;
 }
 
+.drum-pad:hover {
+  color: blue;
+}
+
 .drum-pad:active {
   transform: translateY(4px);
 }
@@ -223,4 +227,53 @@ footer {
   text-align: center;
   text-decoration: underline;
   font-weight: bolder;
+}
+
+/* Music */
+
+.music-container {
+  display: grid;
+  place-items: center;
+}
+
+.music-str {
+  min-height: 100px;
+  width: 500px;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(70px, 250px));
+}
+
+.btn {
+  text-align: center;
+  font-weight: bolder;
+  padding: 10px;
+  margin: 0 20px 10px 20px;
+}
+
+#clearMusic {
+  align-self: center;
+  background-color: darkred;
+  color: white;
+}
+
+#clearMusic:hover {
+  background-color: red;
+  color: black;
+}
+
+#play-btn {
+  background-color: darkgreen;
+  color: white;
+}
+
+#play-btn:hover {
+  background-color: green;
+  color: black;
 }
