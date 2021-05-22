@@ -12,9 +12,12 @@ const Controls = () => {
     <div id="controls">
       <div id="display"> {!power ? "POWER OFF" : display}</div>
       <div id="vol-btn">
+        <label htmlFor="volume_input" className="accessible-elem">
+          Volume
+        </label>
         <FaVolumeOff />
-
         <input
+          name="volume_input"
           type="range"
           value={volume}
           onInput={(e) => changeVol(e, power)}
