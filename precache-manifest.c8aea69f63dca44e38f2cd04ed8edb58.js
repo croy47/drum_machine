@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "6482fd411fe69144e00e",
-    "url": "/drum_machine/static/css/main.d4e7d04c.chunk.css"
+    "revision": "d904e301852455a60204",
+    "url": "/drum_machine/static/css/main.50eab363.chunk.css"
   },
   {
-    "revision": "6482fd411fe69144e00e",
-    "url": "/drum_machine/static/js/main.c79f5497.chunk.js"
+    "revision": "d904e301852455a60204",
+    "url": "/drum_machine/static/js/main.a8596cd0.chunk.js"
   },
   {
     "revision": "eca1fd0fb4770abd83ca",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/drum_machine/static/js/2.d4bb4390.chunk.js"
   },
   {
-    "revision": "8c5397173f0ea20e4869cd9a559319f7",
+    "revision": "76221279a8fd14321902592b1946afce",
     "url": "/drum_machine/index.html"
   }
 ];
