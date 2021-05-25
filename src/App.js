@@ -51,7 +51,7 @@ function App() {
             Source Code
           </a>
         </p>
-        <div id="icon-container">
+        <div>
           <a
             href="https://twitter.com/chandanroy1995"
             target="_blank"
